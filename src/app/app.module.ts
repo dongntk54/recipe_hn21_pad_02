@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
+import { RecipeListComponent } from './components/recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './components/recipes/recipe-detail/recipe-detail.component';
+import { AddOrEditRecipeComponent } from './components/recipes/add-or-edit-recipe/add-or-edit-recipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     RecipesComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    AddOrEditRecipeComponent
   ],
   imports: [
     BrowserModule,
