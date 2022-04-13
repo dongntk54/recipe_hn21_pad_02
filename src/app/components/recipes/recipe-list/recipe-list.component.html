@@ -1,1 +1,31 @@
-<p>recipe-list works!</p>
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-success" routerLink="/recipes/new">
+      New Recipe
+    </button>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-12">
+    <div
+      class="card mb-3"
+      *ngFor="let recipe of recipes"
+      [routerLink]="['/recipes/detail', recipe.id]"
+    >
+      <div class="row no-gutters">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ recipe.name }}</h5>
+            <p class="card-text">
+              {{ recipe.description }}
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <img [src]="recipe.imageURL" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="dropdown" [ngClass]="{ show: open }">
+  <button
+    class="btn btn-{{ color }} dropdown-toggle"
+    type="button"
+    (click)="open = !open"
+  >
+    {{ title }}
+  </button>
+  <div class="dropdown-menu" [ngClass]="{ show: open }" (click)="open = false">
+    <button
+      class="dropdown-item"
+      *ngFor="let option of options"
+      (click)="onSelect(option.value)"
+    >
+      {{ option.name }}
+    </button>
+  </div>
+</div>
